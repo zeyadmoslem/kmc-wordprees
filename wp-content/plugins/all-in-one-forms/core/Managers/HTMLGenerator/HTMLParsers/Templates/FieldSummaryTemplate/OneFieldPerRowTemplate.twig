@@ -1,0 +1,31 @@
+{# @var Model \rednaoeasycalculationforms\core\Managers\HTMLGenerator\HTMLParsers\Templates\FieldSummaryTemplate\OneFieldPerRowTemplate #}
+
+
+<style>
+    .oneFieldPerRow{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .oneFieldPerRow > tbody > tr > td{
+        padding: 5px;
+        border: 1px solid #dfdfdf;
+    }
+
+    .oneFieldPerRow > tbody > tr:nth-child(odd) td
+    {
+        background-color: #fafafa;
+    }
+</style>
+
+<table class="oneFieldPerRow" width="100%">
+    <tbody>
+        {% for currentField in Model.Fields %}
+            <tr>
+                <td>{{ currentField.GetLabel }}</td>
+            </tr>
+            <tr>
+                <td>{{ currentField.GetHtml(Context) }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

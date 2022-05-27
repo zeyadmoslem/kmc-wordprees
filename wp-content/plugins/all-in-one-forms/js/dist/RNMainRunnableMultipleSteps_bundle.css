@@ -1,0 +1,10 @@
+.rnStep {
+    margin: 0 10px;
+}
+.rnStepLabels{
+    transition: color 200ms ease-in-out;
+}
+.rnStepLabels.rnActive{
+    color: blue;
+}
+

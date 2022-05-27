@@ -1,0 +1,371 @@
+/*
+Theme Name: Gutener Medical
+Theme URI: https://keonthemes.com/downloads/gutener-medical
+Author: Keon Themes
+Author URI: https://keonthemes.com
+Description: Gutener Medical is the perfect theme for your Business. Gutener Medical is clean, creative, powerful, flexible, highly customizable and Gutenberg ready WordPress theme. It is fully responsive and is sure to make your website stand out from the crowd. Gutener Medical is a multipurpose theme suitable for any type of WordPress sites such as hospitals, clinics, healthcare organizations, health professionals such as doctors and other experts in the medical field and preferably ideal for any type of sites. Gutener Medical is based on Gutenberg, block base page builder that is highly customizable with powerful theme options including multiple Header layouts, Footer layouts, Post Layouts, Site Layouts and much more. Compatibility for WordPress Classic editor, WooCommerce and Gutenburg makes easier for users. Want a theme to play your site in a myriad of roles your search ends here. Browse the demos to see that its the only theme you will ever want: https://demo.keonthemes.com/gutener
+Version: 1.1.2
+Requires PHP: 5.5
+Tested up to: 5.9
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: gutener
+Text Domain: gutener-medical
+Tags: blog, portfolio, news, grid-Layout, one-column, two-columns, three-columns, flexible-header, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, post-formats, rtl-language-support, theme-options, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks
+
+Gutener Medical WordPress Theme is child theme of Gutener, Copyright 2022 Keon Themes
+Gutener Medical is distributed under the terms of the GNU General Public License v3
+
+Gutener Medical is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+.slick-control li.prev,
+.slick-control li.feature-posts-prev,
+.slick-control li.header-slider-prev {
+  left: 40px;
+}
+
+.slick-control li.next,
+.slick-control li.feature-posts-next,
+.slick-control li.header-slider-next {
+  right: 40px;
+}
+
+.site-header .site-branding .site-title {
+  font-size: 24px;
+}
+
+/*slick slider css*/
+.slick-dots li {
+  height: auto;
+  width: auto;
+  list-style: none;
+  margin: 0 3px;
+}
+
+.slick-dots li button {
+  background-color: transparent;
+  border: 1px solid #868686;
+  font-size: inherit;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  padding: 0;
+}
+
+.highlight-posts-image:before {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  position: absolute;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+.highlight-posts-content-wrap .highlight-posts-title a:before,
+.highlight-posts-layout-one .highlight-posts-content .cat-links a:before,
+.post .highlight-posts-content .entry-meta a:before,
+.highlight-posts-content-wrap .highlight-posts-content:before {
+  position: static;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+}
+
+.highlight-posts-content-wrap .highlight-posts-content .highlight-posts-title {
+  margin-bottom: 30px;
+}
+
+.highlight-posts-content-wrap .highlight-posts-content .highlight-posts-title a {
+  position: relative;
+  display: block;
+}
+
+.highlight-posts-content-wrap .highlight-posts-content .highlight-posts-title a:after {
+  background-color: #ffffff;
+  content: "";
+  height: 1px;
+  width: 50px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.highlight-posts-content-wrap.post.text-right .highlight-posts-content .highlight-posts-title a:after {
+  margin-right: 0;
+}
+
+.highlight-posts-content-wrap.post.text-left .highlight-posts-content .highlight-posts-title a:after {
+  margin-left: 0;
+}
+
+.highlight-posts-layout-one .highlight-posts-content .cat-links {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.highlight-posts-layout-one .highlight-posts-content .cat-links a {
+  margin: 2px;
+  padding: 5px;
+  letter-spacing: 0.8px;
+  line-height: 1;
+}
+
+.post .entry-meta,
+.attachment .entry-meta,
+.banner-content .entry-meta {
+  font-size: 13px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 15px;
+}
+
+.post .entry-meta>span,
+.attachment .entry-meta>span,
+.banner-content .entry-meta>span {
+  display: inline-block;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 991px) {
+
+  .post .entry-meta,
+  .attachment .entry-meta,
+  .banner-content .entry-meta {
+    font-size: 12px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 15px;
+  }
+
+  .post .entry-meta>span,
+  .attachment .entry-meta>span,
+  .banner-content .entry-meta>span {
+    padding: 0 5px;
+  }
+}
+
+.post .entry-meta a:before,
+.attachment .entry-meta a:before,
+.banner-content .entry-meta a:before {
+  color: #f9a032;
+  font-family: "Font Awesome 5 Free";
+  margin-right: 8px;
+  font-size: 12px;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.post .entry-meta .posted-on a:before,
+.attachment .entry-meta .posted-on a:before,
+.banner-content .entry-meta .posted-on a:before {
+  content: "\f073";
+}
+
+.post .entry-meta .byline a:before,
+.attachment .entry-meta .byline a:before,
+.banner-content .entry-meta .byline a:before {
+  content: "\f007";
+}
+
+.post .entry-meta .comments-link a:before,
+.attachment .entry-meta .comments-link a:before,
+.banner-content .entry-meta .comments-link a:before {
+  content: "\f086";
+}
+
+.post .entry-meta .cat-links,
+.post .entry-meta .tag-links,
+.attachment .entry-meta .cat-links,
+.attachment .entry-meta .tag-links,
+.banner-content .entry-meta .cat-links,
+.banner-content .entry-meta .tag-links {
+  position: relative;
+}
+
+.post .entry-meta .cat-links:before,
+.post .entry-meta .tag-links:before,
+.attachment .entry-meta .cat-links:before,
+.attachment .entry-meta .tag-links:before,
+.banner-content .entry-meta .cat-links:before,
+.banner-content .entry-meta .tag-links:before {
+  color: #7B7B7B;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.post .entry-meta .cat-links a,
+.post .entry-meta .tag-links a,
+.attachment .entry-meta .cat-links a,
+.attachment .entry-meta .tag-links a,
+.banner-content .entry-meta .cat-links a,
+.banner-content .entry-meta .tag-links a {
+  display: inline-block;
+  margin-right: 1px;
+}
+
+.post .entry-meta .cat-links a:last-child,
+.post .entry-meta .tag-links a:last-child,
+.attachment .entry-meta .cat-links a:last-child,
+.attachment .entry-meta .tag-links a:last-child,
+.banner-content .entry-meta .cat-links a:last-child,
+.banner-content .entry-meta .tag-links a:last-child {
+  margin-right: 0;
+}
+
+.post .entry-meta .tag-links,
+.attachment .entry-meta .tag-links,
+.banner-content .entry-meta .tag-links {
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.post .entry-meta .tag-links:before,
+.attachment .entry-meta .tag-links:before,
+.banner-content .entry-meta .tag-links:before {
+  content: "\f02c";
+}
+
+@media screen and (max-width: 991px) {
+
+  .post .entry-meta .tag-links,
+  .attachment .entry-meta .tag-links,
+  .banner-content .entry-meta .tag-links {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.site-header .header-image-slider .slick-dots {
+  z-index: 9;
+}
+
+.site-header .header-image-slider .slick-dots li {
+  min-height: auto;
+  height: auto;
+}
+
+.site-header .header-image-slider .slick-dots li button {
+  min-height: auto;
+  height: 12px;
+}
+
+.feature-post-slider .post.has-post-thumbnail:not(.has-no-thumbnail) .post-inner .cat-links {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  margin-bottom: 0;
+  z-index: 2;
+}
+
+.feature-post-slider .post .cat-links a {
+  font-size: 13px;
+  line-height: 1;
+  display: inline-block;
+  margin: 2px;
+  padding: 7px 8px;
+  letter-spacing: 0.8px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s;
+  -ms-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.highlight-posts-content-wrap .cat-links a {
+  display: inline-block;
+  margin: 2px;
+}
+
+.singel-post .header {
+  background-color: red;
+  height: 277px;
+  display: flex;
+  align-items: center;
+  background-image: url(https://kmc.test/wp-content/uploads/2022/05/services-cover.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.singel-post .header::after {
+  background-color: rgba(33, 84, 171, 0.8);
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.singel-post .header h2 {
+  margin: 0 0 0 0;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+}
+.singel-post .content p {
+  margin: 0 0 0 0;
+  color: #676767;
+  font-family: 'Poppins',sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  word-break: break-word;
+
+}

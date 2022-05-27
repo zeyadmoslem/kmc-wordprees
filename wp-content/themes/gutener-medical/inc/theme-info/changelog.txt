@@ -1,0 +1,44 @@
+= 1.1.2 =
+* Header image slider issue fix.
+* Style updated.
+
+= 1.1.1 =
+* Minor functional added.
+
+= 1.1.0 =
+* Structure Updated.
+* Elementor plugin compatibility updated.
+* Style Updated.
+* Title-tag and automatic-feed-links support added.
+
+= 1.0.9 =
+* Slider navigation issue fixed.
+
+= 1.0.8 =
+* Style Updated.
+
+= 1.0.7 =
+* Style Updated.
+
+= 1.0.6 =
+* Minor functional issues fixed.
+
+= 1.0.5 =
+* Updated a escaping.
+
+= 1.0.4 =
+* Updated a escaping.
+* Theme URI updated.
+
+= 1.0.3 =
+* Escaping issues fixed.
+* Style Updated.
+
+= 1.0.2 =
+* Style Updated.
+
+= 1.0.1 =
+* Style Updated.
+
+= 1.0.0 =
+* Initial release.

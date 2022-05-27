@@ -1,0 +1,26 @@
+{# @var Model \rednaoeasycalculationforms\core\Managers\HTMLGenerator\HTMLParsers\DocumentParser #}
+
+{% apply inline_css(true) %}
+   <style>
+      ul{
+         text-align: left;
+      }
+
+
+
+      ol{
+         text-align: left;
+      }
+
+      table{
+         width: 100%;
+      }
+
+      table td{
+         text-align: left;
+      }
+   </style>
+<div>
+   {{ Model.RenderChildren() }}
+</div>
+{% endapply %}

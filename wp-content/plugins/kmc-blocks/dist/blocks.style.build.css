@@ -1,0 +1,59 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-block-kmc-blocks {
+  background: orangered;
+  border: 0.2rem solid #292929;
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem; }
+
+.services-item {
+  position: relative;
+  height: 350px; }
+  .services-item span {
+    margin: 0 0 20px 0;
+    font-size: 50px;
+    color: #4f87fb; }
+  .services-item h4 {
+    margin: 0 0 10px 0;
+    color: #130947 !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600; }
+  .services-item p {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    word-break: break-word;
+    color: #676767 !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; }
+  .services-item a {
+    font-size: 16px;
+    color: #4f87fb !important;
+    text-decoration: none;
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    position: absolute;
+    bottom: 15px; }
+    .services-item a:hover {
+      color: #4f87fb !important; }
+    .services-item a i {
+      font-size: 20px;
+      position: absolute;
+      right: -20px;
+      top: 5px; }
+    .services-item a span {
+      font-size: 16px; }
+  .services-item i {
+    font-style: normal !important; }

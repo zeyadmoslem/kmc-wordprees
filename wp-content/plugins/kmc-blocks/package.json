@@ -1,0 +1,15 @@
+{
+  "name": "kmc-blocks-cgb-guten-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^6.6.0",
+    "cgb-scripts": "1.23.1",
+    "html-react-parser": "^1.4.13"
+  }
+}

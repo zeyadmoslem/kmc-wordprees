@@ -1,0 +1,22 @@
+<div class="bottom-footer">
+	<div class="container">	
+		<!-- social links area -->
+		<?php if( !get_theme_mod( 'disable_footer_social_links', false ) && gutener_has_social() ){
+			echo '<div class="social-profile">';
+				gutener_social();
+			echo '</div>'; 
+		} ?> <!-- social links area -->
+		<?php if ( has_nav_menu( 'menu-2' ) && !get_theme_mod( 'disable_footer_menu', false )){ ?>
+			<div class="footer-menu"><!-- Footer Menu-->
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'footer-menu',
+					'depth'          => 1,
+				) );
+				?>
+			</div><!-- footer Menu-->
+		<?php }
+		get_template_part( 'template-parts/site', 'info' ); ?>
+	</div>
+</div>
