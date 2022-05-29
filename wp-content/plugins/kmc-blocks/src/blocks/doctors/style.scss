@@ -1,0 +1,77 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-kmc-blocks {
+  background: $red;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+}
+
+.doctors-item .item-card {
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.doctors-item .item-card .top {
+  height: 45%;
+  background-image: linear-gradient(108deg, #4f87fb 0%, #4124d9 100%);
+}
+
+.doctors-item .item-card .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.doctors-item .item-card .center img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-box-shadow: 0px 0px 0px 5px #4f87fb;
+  box-shadow: 0px 0px 0px 5px #4f87fb;
+  border: 4px solid #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.doctors-item .item-card:hover .center img {
+  -webkit-transform: scale(1.1) rotate(-3deg);
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.doctors-item .item-card .bottom {
+  height: 55%;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 75px;
+}
+
+.doctors-item .item-card .bottom h3 {
+  color: #130947;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.doctors-item .item-card .bottom p {
+  color: #555;
+  font-size: 15px;
+}

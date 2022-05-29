@@ -97,9 +97,37 @@ function kmc_blocks_cgb_block_assets()
 
 		)
 	);
+
+	register_block_type(
+		'kmc/news',
+		array(
+			// Enqueue blocks.style.build.css on both frontend & backend.
+			'style'         => 'kmc_blocks-cgb-style-css',
+			// Enqueue blocks.build.js in the editor only.
+			'editor_script' => 'kmc_blocks-cgb-block-js',
+			// Enqueue blocks.editor.build.css in the editor only.
+			'editor_style'  => 'kmc_blocks-bootstrap4',
+			'render_callback' => 'render_news',
+
+		)
+	);
+
+	register_block_type(
+		'kmc/doctors',
+		array(
+			// Enqueue blocks.style.build.css on both frontend & backend.
+			'style'         => 'kmc_blocks-cgb-style-css',
+			// Enqueue blocks.build.js in the editor only.
+			'editor_script' => 'kmc_blocks-cgb-block-js',
+			// Enqueue blocks.editor.build.css in the editor only.
+			'editor_style'  => 'kmc_blocks-bootstrap4',
+			'render_callback' => 'render_doctors',
+
+		)
+	);
 }
 
-// Render Block Sections
+// Render Services Block Sections
 function render_services()
 {
 
@@ -121,10 +149,10 @@ function render_services()
 	foreach (array_reverse($services) as $service => $value) {
 
 		$output .= '<div class="col-lg-4 col-md-6 col-sm-12 services-item p-3">';
-		$output .= '<span>'.$value['icon'].'</span>';
-		$output .= '<h4 class="pt-2">'.$value['title'].'</h4>';
-		$output .= '<p>'.$value['description'].'</p>';
-		$output .= '<a  class="gutentor-button gutentor-block-button gutentor-icon-after" href='. $value['link'] .'>
+		$output .= '<span>' . $value['icon'] . '</span>';
+		$output .= '<h4 class="pt-2">' . $value['title'] . '</h4>';
+		$output .= '<p>' . $value['description'] . '</p>';
+		$output .= '<a  class="gutentor-button gutentor-block-button gutentor-icon-after" href=' . $value['link'] . '>
 		 				<i class="gutentor-button-icon fas fa-long-arrow-alt-right"></i>
 						<span>Mehr erfahren</span>
 					</a>';
@@ -138,6 +166,85 @@ function render_services()
 	return $output;
 }
 
+
+// Render News Block Sections
+function render_news()
+{
+
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_URL, site_url() . '/wp-json/news/v1/all');
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HEADER, false);
+
+	$response = curl_exec($curl);
+
+	curl_close($curl);
+
+	$news = json_decode($response, TRUE);
+
+	ob_start();
+	echo "<div class='row p-4 pt-5 '>";
+	$output = ob_get_clean();
+
+	foreach ($news as $item => $value) {
+
+		$output .= '<div class="col-xs-12 col-md-6 news-item">
+						<div class="box one">
+						<div class="content">
+							<h3>' . $value['title'] . '</h3>
+							<p>' . $value['description'] . '</p>
+							<a href="' . $value['link'] . '">Weiterlesen</a>
+						</div>
+						</div>
+					</div>';
+	}
+
+	ob_start();
+	$output .= "</div>";
+	$output .= ob_get_clean();
+	return $output;
+}
+
+// Render Doctors Block Sections
+function render_doctors()
+{
+
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_URL, site_url() . '/wp-json/doctors/v1/all');
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HEADER, false);
+	$response = curl_exec($curl);
+	curl_close($curl);
+	$news = json_decode($response, TRUE);
+
+	ob_start();
+	echo "<div class='row p-4'>";
+	$output = ob_get_clean();
+
+	foreach ($news as $item => $value) {
+
+		$output .= '<div class="col-sm-12 col-md-3 doctors-item p-3">
+						<a href="' . $value['link'] . '">
+							<div class="item-card">
+								<div class="top">
+								</div>
+								<div class="center">
+									<img src="' . $value['image'] . '" alt="img-responsive" />
+								</div>
+								<div class="bottom">
+									<h3>' . $value['title'] . '</h3>
+									<p>' . $value['description'] . '</p>
+								</div>
+							</div>
+						</a>
+					</div>';
+	}
+
+	ob_start();
+	$output .= "</div>";
+	$output .= ob_get_clean();
+	return $output;
+}
 
 // Hook: Block assets.
 add_action('init', 'kmc_blocks_cgb_block_assets');

@@ -1,1 +1,0 @@
-rndefine("#RNMainChangeOptionsPriceCondition",["#RNMainFormBuilderCore/ConditionBase.Options"],(function(i){"use strict";class e extends i.ConditionBaseOptions{constructor(...i){super(...i),this.PriceName=""}LoadDefaultValues(){super.LoadDefaultValues(),this.Type="ChangeOptionsPrice",this.PriceName="Price"}}exports.ChangeOptionsPriceConditionOptions=e}));

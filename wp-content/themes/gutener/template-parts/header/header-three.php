@@ -67,11 +67,11 @@
 			<?php if( gutener_has_header_media() ){ gutener_header_media(); } ?>
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-lg-3">
+					<div class="col-lg-2">
 						<?php get_template_part( 'template-parts/site', 'branding' ); ?>
 						<div class="mobile-menu-container"></div>
 					</div>
-					<div class="col-lg-9 d-none d-lg-block">
+					<div class="col-lg-10 d-none d-lg-block">
 						<div class="main-navigation-wrap">
 							<nav id="site-navigation" class="main-navigation">
 								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gutener' ); ?></button>

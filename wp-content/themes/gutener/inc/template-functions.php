@@ -84,7 +84,7 @@ function gutener_page_title_display() {
 	<?php elseif ( is_archive() ) : 
 		the_archive_title( '<h1 class="page-title">', '</h1>' );
 	elseif ( is_search() ) : ?>
-		<h1 class="page-title entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'gutener' ), get_search_query() ); ?></h1>
+		<h1 class="page-title entry-title"><?php printf( esc_html__( 'Suchergebnisse für: %s', 'gutener' ), get_search_query() ); ?></h1>
 	<?php elseif ( is_404() ) :
 		echo '<h1 class="page-title entry-title">' . esc_html__( 'Oops! That page can&#39;t be found.', 'gutener' ) . '</h1>';
 	endif;

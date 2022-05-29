@@ -69,8 +69,6 @@ registerBlockType('kmc/services', {
 		if (props.attributes.services && props.attributes.services === 0) {
 			return "No Services found";
 		}
-		console.log(props.attributes.services);
-
 		return (
 			<div class="row p-4">
 				{

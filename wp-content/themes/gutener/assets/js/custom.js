@@ -461,6 +461,10 @@ jQuery( window ).on( 'load', function(){
     },500);
     });
 
+
+
+
+
 }); // closing window load
 
 // Window scroll

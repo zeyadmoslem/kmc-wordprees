@@ -369,3 +369,69 @@ a:focus {
   word-break: break-word;
 
 }
+
+/* Contact Form7 Styles */
+
+
+.wpcf7-submit{
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+}
+
+.medicines_form .wpcf7-field-group{
+  position: relative;
+}
+
+.medicines_form .wpcf7-field-group p{
+  position: absolute;
+  top: 32px;
+  right: 0;
+}
+.medicines_form .wpcf7-field-group p button{
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+} 
+
+
+/* Opning Hours style*/
+.op-table{
+  border: none;
+}
+
+ .op-table th{
+  color: #fff;
+  font-weight: 500;
+}
+ .op-table td{
+  border-bottom: 1px solid #ebebeb !important;
+  border-top: none !important;
+  color: #fff;
+  text-align: left;
+
+}
+.op-table td span{
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.op-table td span:not(:first-child)::before {
+  content: ' & ';
+}
+
+.contact .op-table tr{
+  height: 60px !important;
+}
+.contact .grid-container{
+  padding: 11px 0px;
+}
+.contact .grid-container .gutentor-single-item-title{
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.contact .grid-container .gutentor-opening-hours-time-wrap{
+  margin-left: 25px !important;
+  font-weight: 600;
+  color: #fff;
+}

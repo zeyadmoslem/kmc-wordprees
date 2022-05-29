@@ -10,3 +10,5 @@
  */
 
 import './blocks/services/block.js';
+import './blocks/news/block.js';
+import './blocks/doctors/block.js';

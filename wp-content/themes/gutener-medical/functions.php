@@ -57,3 +57,41 @@ add_action('after_setup_theme', 'gutener_medical_setup', 99);
 
 add_theme_support("title-tag");
 add_theme_support('automatic-feed-links');
+
+
+function my_mce4_options($init)
+{
+	$default_colours = '"000000", "Black",
+						"FF6600", "Orange",
+						"FF0000", "Red"';
+
+	$custom_colours =  '"130947", "Main Color",
+						"2b65bf", "Secound Color"';
+
+	// build colour grid default+custom colors
+	$init['textcolor_map'] = '[' . $custom_colours . ',' . $default_colours . ']';
+
+	// enable 6th row for custom colours in grid
+	$init['textcolor_rows'] = 6;
+
+	return $init;
+}
+add_filter('tiny_mce_before_init', 'my_mce4_options');
+
+
+// Set pages title 
+
+add_filter('document_title_parts', function ($title) {
+	if (is_search()) {
+		$title['title'] = sprintf(
+			esc_html__('Suchergebnisse für &#8220;%s&#8221;', 'my-theme-domain'),
+			get_search_query()
+		);
+	}
+
+	if (is_404()) {
+		$title['title'] = 'Seite nicht gefunden';
+	}
+
+	return $title;
+});
