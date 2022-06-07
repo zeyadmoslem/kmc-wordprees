@@ -42,7 +42,7 @@
 	else {
 		echo '<div class="col-12">';
 		echo '<p class="not-found">';
-		esc_html_e( 'No Related Post', 'gutener' );
+		esc_html_e( 'Kein verwandter Beitrag', 'gutener' );
 		echo '</p>';
 		echo '</div>';
 	}

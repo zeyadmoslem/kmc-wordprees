@@ -26,7 +26,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <p class="mb-3"><?= get_post_meta($post->ID)['description'][0] ?></p>
                     </div>
                     <div class="col-sm-12 col-md-8">
-                        <p><?= get_post_meta($post->ID)['content'][0] ?></p>
+                        <?php echo wpautop(do_shortcode(get_post_meta($post->ID)['content'][0])) ?>
                     </div>
                 </div>
             </section>

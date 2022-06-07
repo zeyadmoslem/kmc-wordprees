@@ -88,22 +88,6 @@ if( !get_theme_mod( 'disable_transparent_header_post', true ) && get_theme_mod( 
 
 								get_template_part( 'template-parts/content', 'single' );
 								
-								if ( is_single() && !get_theme_mod( 'hide_single_post_author', false ) ){
-									?>
-										<div class="author-info">
-											<div class="section-title-wrap">
-												<h3 class="section-title">
-													<?php echo esc_html(get_theme_mod( 'single_post_author_title', 'About the Author' )); ?>
-												</h3>
-											</div>
-											<?php
-												# Print author.
-											    get_template_part( 'template-parts/content', 'author' );
-											?>
-										</div>
-									<?php
-								}
-
 								the_post_navigation();
 
 								// If comments are open or we have at least one comment, load up the comment template.
@@ -141,7 +125,7 @@ if( !get_theme_mod( 'disable_transparent_header_post', true ) && get_theme_mod( 
 			<section class="section-ralated-post">
 				<div class="section-title-wrap">
 					<h2 class="section-title">
-						<?php echo esc_html(get_theme_mod( 'related_posts_title', esc_html__( 'You may also like these', 'gutener' ) )); ?>
+						<?php echo esc_html(get_theme_mod( 'related_posts_title', esc_html__( 'Diese könnten Ihnen auch gefallen', 'gutener' ) )); ?>
 					</h2>
 				</div>
 				<div class="wrap-ralated-posts">

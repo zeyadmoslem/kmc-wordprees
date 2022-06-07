@@ -8458,16 +8458,3 @@ function wp_recursive_ksort( &$array ) {
 	}
 	ksort( $array );
 }
-
-function mytheme_add_init() {
-    if ( is_admin() ) {
-        wp_enqueue_style("functions", "https://kmc.test/wp-content/plugins/gutentor//assets/library/fontawesome/css/all.min.css", false, "1.0", "all");
-    }
-}
-add_action( 'wp_enqueue_scripts', 'mytheme_add_init' );
-
-
-add_action('admin_head', 'my_custom_fonts');
-function my_custom_fonts() { 
-  echo '<link rel="stylesheet"  href="https://kmc.test/wp-content/plugins/gutentor//assets/library/fontawesome/css/all.min.css">';
-}

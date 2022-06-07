@@ -360,57 +360,74 @@ a:focus {
   font-size: 55px;
   font-weight: 700;
 }
+
 .singel-post .content p {
   margin: 0 0 0 0;
   color: #676767;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   font-weight: 400;
   word-break: break-word;
 
 }
+.header-sidebar{
+  text-align: center;
+}
 
 /* Contact Form7 Styles */
 
 
-.wpcf7-submit{
+.wpcf7-submit {
   background-color: #007bff !important;
   border-color: #007bff !important;
 }
 
-.medicines_form .wpcf7-field-group{
+.medicines_form .wpcf7-field-group {
   position: relative;
 }
 
-.medicines_form .wpcf7-field-group p{
+.medicines_form .wpcf7-field-group p {
   position: absolute;
   top: 32px;
   right: 0;
 }
-.medicines_form .wpcf7-field-group p button{
+
+.medicines_form .wpcf7-field-group p button {
   margin-right: 5px;
   width: 35px;
   height: 35px;
-} 
+}
+
+@media (max-width: 991.98px) {
+  .medicines_form .wpcf7-field-group {
+    margin: 10px 0px !important;
+  }
+
+  .medicines_form .wpcf7-field-group p {
+    top: unset !important;
+  }
+}
 
 
 /* Opning Hours style*/
-.op-table{
+.op-table {
   border: none;
 }
 
- .op-table th{
+.op-table th {
   color: #fff;
   font-weight: 500;
 }
- .op-table td{
+
+.op-table td {
   border-bottom: 1px solid #ebebeb !important;
   border-top: none !important;
   color: #fff;
   text-align: left;
 
 }
-.op-table td span{
+
+.op-table td span {
   display: inline-block;
   margin-left: 7px;
 }
@@ -419,19 +436,89 @@ a:focus {
   content: ' & ';
 }
 
-.contact .op-table tr{
+.contact .op-table tr {
   height: 60px !important;
 }
-.contact .grid-container{
+
+.contact .grid-container {
   padding: 11px 0px;
 }
-.contact .grid-container .gutentor-single-item-title{
+
+.contact .grid-container .gutentor-single-item-title {
   color: #fff;
   font-weight: 600;
   margin-bottom: 0;
 }
-.contact .grid-container .gutentor-opening-hours-time-wrap{
+
+.contact .grid-container .gutentor-opening-hours-time-wrap {
   margin-left: 25px !important;
   font-weight: 600;
   color: #fff;
+}
+
+
+/* Imprint page Style*/
+
+.imprint-boxes .box {
+  position: relative;
+  background: #fcfbfb;
+  border: 1px solid #4124d975;
+  -webkit-box-shadow: 1px 1px 10px #cccccc94;
+  box-shadow: 1px 1px 10px #cccccc94;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  min-height: 350px;
+}
+
+.imprint-boxes .grid-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2%;
+}
+.imprint-boxes .box:before {
+  content: '';
+  position: absolute;
+  top: -02px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  transform: skew(2deg, 2deg);
+  z-index: -1;
+  background: linear-gradient(315deg, #4f87fb, #4124d9);
+
+}
+.imprint-boxes .box div {
+  position: relative;
+  padding: 10px 10px 0px 10px;
+  margin-top: 0px;
+  overflow: hidden;
+
+}
+.imprint-boxes .box div h4 {
+  margin: 60px 0px 0px 0px;
+  padding: 0;
+  color: #130947 !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.imprint-boxes .box div h5 {
+  color: #130947 !important;
+  margin: 10px 0px !important;
+}
+
+.imprint-boxes .box div p {
+  margin: 5px 0px;
+  padding: 0;
+}
+.imprint-boxes .box div p a {
+  color: #2154ac;
+}
+@media (max-width: 991.98px) {
+  .imprint-boxes .grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: none;
+    padding: 10px 20px;
+  }
 }

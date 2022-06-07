@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc3499d78139cb5a05b10193198da5145
+class ComposerStaticInit3b2020fb68057707b7973c91ef892a30
 {
     public static $files = array (
         'ce89ac35a6c330c55f4710717db9ff78' => __DIR__ . '/..' . '/kriswallsmith/assetic/src/functions.php',
@@ -35,14 +35,23 @@ class ComposerStaticInitc3499d78139cb5a05b10193198da5145
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
         ),
+        'L' => 
+        array (
+            'LocateBinaries\\' => 15,
+        ),
         'I' => 
         array (
             'Intervention\\HttpAuth\\' => 22,
+            'ImageMimeTypeSniffer\\' => 21,
             'ImageMimeTypeGuesser\\' => 21,
         ),
         'H' => 
         array (
             'HtaccessCapabilityTester\\' => 25,
+        ),
+        'F' => 
+        array (
+            'FileUtil\\' => 9,
         ),
         'E' => 
         array (
@@ -87,9 +96,17 @@ class ComposerStaticInitc3499d78139cb5a05b10193198da5145
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
+        'LocateBinaries\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rosell-dk/locate-binaries/src',
+        ),
         'Intervention\\HttpAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/httpauth/src',
+        ),
+        'ImageMimeTypeSniffer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rosell-dk/image-mime-type-sniffer/src',
         ),
         'ImageMimeTypeGuesser\\' => 
         array (
@@ -98,6 +115,10 @@ class ComposerStaticInitc3499d78139cb5a05b10193198da5145
         'HtaccessCapabilityTester\\' => 
         array (
             0 => __DIR__ . '/..' . '/rosell-dk/htaccess-capability-tester/src',
+        ),
+        'FileUtil\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rosell-dk/file-util/src',
         ),
         'ExecWithFallback\\' => 
         array (
@@ -197,15 +218,19 @@ class ComposerStaticInitc3499d78139cb5a05b10193198da5145
         'lessc_formatter_compressed' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_formatter_lessjs' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_parser' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+        'simplehtmldom\\Debug' => __DIR__ . '/..' . '/simplehtmldom/simplehtmldom/Debug.php',
+        'simplehtmldom\\HtmlDocument' => __DIR__ . '/..' . '/simplehtmldom/simplehtmldom/HtmlDocument.php',
+        'simplehtmldom\\HtmlNode' => __DIR__ . '/..' . '/simplehtmldom/simplehtmldom/HtmlNode.php',
+        'simplehtmldom\\HtmlWeb' => __DIR__ . '/..' . '/simplehtmldom/simplehtmldom/HtmlWeb.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc3499d78139cb5a05b10193198da5145::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc3499d78139cb5a05b10193198da5145::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc3499d78139cb5a05b10193198da5145::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc3499d78139cb5a05b10193198da5145::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3b2020fb68057707b7973c91ef892a30::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3b2020fb68057707b7973c91ef892a30::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3b2020fb68057707b7973c91ef892a30::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3b2020fb68057707b7973c91ef892a30::$classMap;
 
         }, null, ClassLoader::class);
     }

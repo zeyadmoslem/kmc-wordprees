@@ -19,7 +19,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 </div>
             </section>
             <section class="content container py-5">
-                <p><?= get_post_meta($post->ID)['content'][0] ?></p>
+                <?php echo wpautop(do_shortcode(get_post_meta($post->ID)['content'][0])) ?>
             </section>
         </div>
 

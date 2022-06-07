@@ -80,18 +80,24 @@ add_filter('tiny_mce_before_init', 'my_mce4_options');
 
 
 // Set pages title 
+// add_filter('document_title_parts', function ($title) {
+// 	if (is_search()) {
+// 		$title['title'] = sprintf(
+// 			esc_html__('Suchergebnisse für &#8220;%s&#8221;', 'my-theme-domain'),
+// 			get_search_query()
+// 		);
+// 	}
 
-add_filter('document_title_parts', function ($title) {
-	if (is_search()) {
-		$title['title'] = sprintf(
-			esc_html__('Suchergebnisse für &#8220;%s&#8221;', 'my-theme-domain'),
-			get_search_query()
-		);
-	}
+// 	if (is_404()) {
+// 		$title['title'] = 'Seite nicht gefunden';
+// 	}
 
-	if (is_404()) {
-		$title['title'] = 'Seite nicht gefunden';
-	}
+// 	return $title;
+// });
 
-	return $title;
-});
+
+// Add Costum Css Files to Admin Dashboard
+function enqueuing_admin_scripts(){
+    wp_enqueue_style('fontawesome', get_template_directory_uri().'/assets/library/fontawesome/css/all.min.css?ver=5.12.0');
+}
+add_action( 'admin_enqueue_scripts', 'enqueuing_admin_scripts' );

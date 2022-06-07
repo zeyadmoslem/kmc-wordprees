@@ -15,8 +15,11 @@ return array(
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'MatthiasMullie\\PathConverter\\' => array($vendorDir . '/matthiasmullie/path-converter/src'),
     'MatthiasMullie\\Minify\\' => array($vendorDir . '/matthiasmullie/minify/src'),
+    'LocateBinaries\\' => array($vendorDir . '/rosell-dk/locate-binaries/src'),
     'Intervention\\HttpAuth\\' => array($vendorDir . '/intervention/httpauth/src'),
+    'ImageMimeTypeSniffer\\' => array($vendorDir . '/rosell-dk/image-mime-type-sniffer/src'),
     'ImageMimeTypeGuesser\\' => array($vendorDir . '/rosell-dk/image-mime-type-guesser/src'),
     'HtaccessCapabilityTester\\' => array($vendorDir . '/rosell-dk/htaccess-capability-tester/src'),
+    'FileUtil\\' => array($vendorDir . '/rosell-dk/file-util/src'),
     'ExecWithFallback\\' => array($vendorDir . '/rosell-dk/exec-with-fallback/src'),
 );
